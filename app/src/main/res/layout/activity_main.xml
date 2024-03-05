@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KASIRKU"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_red_dark"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupItems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTitle"
+        android:layout_marginBottom="16dp">
+
+        <RadioButton
+            android:id="@+id/radioButtonPulsa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Pulsa" />
+
+        <RadioButton
+            android:id="@+id/radioButtonToken"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Token" />
+
+        <RadioButton
+            android:id="@+id/radioButtonEmoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Emoney" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroupMembership"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroupItems"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="==============================" />
+
+        <RadioButton
+            android:id="@+id/radioButtonMembership"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Membership" />
+
+        <RadioButton
+            android:id="@+id/radioButtonNonMembership"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Non-Membership" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editTextQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:hint="JUMLAH ITEM"
+        android:layout_below="@id/radioGroupMembership"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/buttonProcess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Proses"
+        android:layout_below="@id/editTextQuantity"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:onClick="processTransaction"/>
+
+    <TextView
+        android:id="@+id/textViewReceipt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text=""
+        android:layout_below="@id/buttonProcess"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+</RelativeLayout>
